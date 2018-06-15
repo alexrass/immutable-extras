@@ -10,7 +10,7 @@ Install
 npm install --save immutable-extras
 ```
 ```bash
-yarn add --save immutable-extras
+yarn add immutable-extras
 ```
 
 <br>
