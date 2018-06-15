@@ -10,7 +10,7 @@
     "immutable",
     "immutablejs",
     "extra",
-    "extension",
+    "extension"
   ],
   "author": "alexrass",
   "license": "MIT",
@@ -23,6 +23,6 @@
     "url": "git+https://github.com/alexrass/immutable-extras.git"
   },
   "peerDependencies": {
-    "immutable": "^3.8.2"
+    "immutable": "*"
   }
 }
