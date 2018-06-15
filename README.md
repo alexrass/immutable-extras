@@ -1,7 +1,7 @@
 immutable-extras
 ================
 
-Simple extensions for the (Immutable.js library)[https://github.com/facebook/immutable-js/]
+Simple extensions for the [Immutable.js library](https://github.com/facebook/immutable-js/)
 
 Install
 -------
