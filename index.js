@@ -34,3 +34,28 @@ Immutable.List.prototype.unique = function(funcOrKey) {
     return this.toSet().toList();
   }
 };
+
+
+function sortHelper(a, b, sortFns) {
+  const [ currentFn , ...nextFns ] = sortFns;
+
+  if (!!currentFn) {
+    const result = currentFn(a, b);
+    if (result === 0) {
+      return sortHelper(a, b, nextFns);
+    } else {
+      return result;
+    }
+  } else {
+    return 0;
+  }
+};
+/**
+ * Sort by multiple criteria
+ *
+ * Pass in an array of sorting functions.  If two values are equal, the next sorting function is used.
+ */
+Immutable.List.prototype.multiSort = function(...sortFns) {
+  const fns = sortFns.length > 0 ? sortFns : [ (a, b) => a.localeCompare(b) ]
+  return this.sort((a, b) => sortHelper(a, b, fns));
+};

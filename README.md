@@ -52,4 +52,11 @@ const mapped = someList.mapOn(v => v.name);
 //      b: { id: 15, name: 'b' },
 //      c: { id: 5, name: 'c' },
 //    }
+
+const sortedList = Immutable.List([ 'bd', 'ab', 'c', 'bb']).multiSort(
+  (a, b) => b.length - a.length,
+  (a, b) => a.localeCompare(b),
+)
+// sortedList ->
+//    ["ab", "bb", "bd", "c"]
 ```
