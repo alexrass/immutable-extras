@@ -59,4 +59,8 @@ const sortedList = Immutable.List([ 'bd', 'ab', 'c', 'bb']).multiSort(
 )
 // sortedList ->
 //    ["ab", "bb", "bd", "c"]
+
+const groupedList = Immutable.List([ '1', '2', '3', '4' ]).group(2)
+// groupedList ->
+//    [ [ '1', '2' ], [ '3', '4' ]]
 ```
