@@ -73,10 +73,10 @@ const safeSetMap = Immutable.fromJS({ a: undefined }).safeSetIn({ a: { b: 'c' }}
 //   }
 
 class TestClass {}
-const classList1 = Immutable.ClassList(TestClass)([ { a: 1 } ]);
-const classList2 = Immutable.ClassList(TestClass).of({ a: 1 });
+const classList1 = Immutable.List([ { a: 1 } ]).class(TestClass);
+const classList2 = Immutable.List.of({ a: 1 }).class(TestClass);
 // classList1 ->
-//   Immutable.List([ TestClass({ a: 1 }) ])
+//   Immutable.List([ TestClass(...) ])
 // classList2 ->
-//   Immutable.List([ TestClass({ a: 1 }) ])
+//   Immutable.List([ TestClass(...) ])
 ```
