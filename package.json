@@ -3,7 +3,7 @@
   "bugs": {
     "url": "https://github.com/alexrass/immutable-extras/issues"
   },
-  "version": "1.6.2",
+  "version": "1.6.3",
   "description": "Some extensions on top of immutable.js",
   "main": "lib/index.js",
   "keywords": [
